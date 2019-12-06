@@ -92,16 +92,16 @@ unsigned int find_minimum(unsigned char* data, unsigned int len){
 }
 
 void sort_array(unsigned char* data, unsigned int len){
-	bool finished = false;
-	while(!finished){
-		finished = true;
+	bool sorted = false;
+	while(!sorted){
+		sorted = true;
 		unsigned int i;
 		for(i=0; i<(len-1); i++){
 			if(data[i] < data[i+1]){
 				unsigned int temp = data[i];
 				data[i] = data[i+1];
 				data[i+1] = temp;
-				finished = false;
+				sorted = false;
 			}
 		}
 	}
